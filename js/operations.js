@@ -33,7 +33,7 @@ export default class Calculator {
 
     // &prevent typing duplicate operators
     operators.forEach((opr) => {
-      if (lastValue == opr && space !== " ") {
+      if (lastValue == opr && space == " ") {
         const newValue = this.currentValue.textContent.slice(0, -2);
         this.currentValue.textContent = newValue;
       }
