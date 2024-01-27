@@ -17,7 +17,7 @@ export default class Calculator {
     if (this.currentValue.textContent == "0") {
       this.currentValue.textContent = "";
     }
-    
+
     this.currentValue.append(no);
   }
 
@@ -99,7 +99,6 @@ export default class Calculator {
           results.splice(indx - 1, 3, 0, this.output);
         }
       });
-      if (this.output || this.output == 0) {
       if (this.output || this.output == 0) {
         this.currentValue.textContent = this.output;
       }
