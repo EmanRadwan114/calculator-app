@@ -17,7 +17,10 @@ export default class Calculator {
     if (this.currentValue.textContent == "0") {
       this.currentValue.textContent = "";
     }
-    this.currentValue.append(no);
+    if(no < 0){
+      this.currentValue.append(`${no} `)
+    }else{
+    this.currentValue.append(no);}
   }
 
   chooseOperation(operation, operators) {
