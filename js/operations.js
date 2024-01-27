@@ -95,7 +95,7 @@ export default class Calculator {
         }
       });
       if (this.output || this.output == 0) {
-        this.currentValue.textContent = `${this.output} `;
+        this.currentValue.textContent = this.output;
       }
     }
   }
