@@ -23,14 +23,17 @@ export default class Calculator {
 
   chooseOperation(operation, operators) {
     const lastValue = this.currentValue.textContent.charAt(
-      this.currentValue.textContent.length - 2
+      this.currentValue.textContent.length - 2);
       // ^length - 2, not - 1 because there is an extra space presents after any operator
       // ^ this space helps in splitting the string into array
-    );
+    
+
+    const space = this.currentValue.textContent.charAt(
+      this.currentValue.textContent.length - 1)
 
     // &prevent typing duplicate operators
     operators.forEach((opr) => {
-      if (lastValue == opr) {
+      if (lastValue == opr && space !== " ") {
         const newValue = this.currentValue.textContent.slice(0, -2);
         this.currentValue.textContent = newValue;
       }
@@ -95,7 +98,7 @@ export default class Calculator {
         }
       });
       if (this.output || this.output == 0) {
-        this.currentValue.textContent = `${this.output}`.split("").join(" ");
+        this.currentValue.textContent = this.output;
       }
     }
   }
