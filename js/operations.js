@@ -17,20 +17,26 @@ export default class Calculator {
     if (this.currentValue.textContent == "0") {
       this.currentValue.textContent = "";
     }
+
     this.currentValue.append(no);
   }
 
   chooseOperation(operation, operators) {
     const lastValue = this.currentValue.textContent.charAt(
       this.currentValue.textContent.length - 2
-      // ^length - 2, not - 1 because there is an extra space presents after any operator
-      // ^ this space helps in splitting the string into array
+    );
+    // ^length - 2, not - 1 because there is an extra space presents after any operator
+    // ^ this space helps in splitting the string into array
+
+    const space = this.currentValue.textContent.charAt(
+      this.currentValue.textContent.length - 1
     );
 
     // &prevent typing duplicate operators
     operators.forEach((opr) => {
-      if (lastValue == opr) {
-        const newValue = this.currentValue.textContent.slice(0, -2);
+      if (lastValue == opr && space == " ") {
+        const newValue = this.currentValue.textContent.slice(0, -3);
+        //^[' ', '+', ' '] ==> slice(0,-3) to remove the 2 spaces at the start & the end & also remove the prev operator
         this.currentValue.textContent = newValue;
       }
     });
@@ -93,7 +99,7 @@ export default class Calculator {
           results.splice(indx - 1, 3, 0, this.output);
         }
       });
-      if (this.output) {
+      if (this.output || this.output == 0) {
         this.currentValue.textContent = this.output;
       }
     }
