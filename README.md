@@ -12,8 +12,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution Link](https://your-solution-url.com)
-- [Live Demo Link](https://your-live-site-url.com)
+- [Solution Link](https://www.frontendmentor.io/solutions/calculator-app-built-with-html-css-and-js-BiUtnF8qsP)
+- [Live Demo Link](https://emanradwan114.github.io/calculator-app/)
 
 ### Built with
 
