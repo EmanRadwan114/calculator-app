@@ -93,7 +93,7 @@ export default class Calculator {
           results.splice(indx - 1, 3, 0, this.output);
         }
       });
-      if (this.output) {
+      if (this.output || this.output == 0) {
         this.currentValue.textContent = this.output;
       }
     }
