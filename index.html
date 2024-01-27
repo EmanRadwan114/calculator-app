@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator App</title>
+    <!-- metas -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate your Daily Math Operations easily"
+    />
+    <meta name="keywords" content="calculate" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
+    <!-- style -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="calculatorContainer">
+          <div class="theme">
+            <p class="calc">Calc</p>
+            <div class="themeBox">
+              <p class="themeTitle">Theme</p>
+              <div class="themeNo">
+                <div class="labels">
+                  <label for="frTheme">1</label>
+                  <label for="snTheme">2</label>
+                  <label for="thrTheme">3</label>
+                </div>
+                <div class="inputs">
+                  <input
+                    type="radio"
+                    name="themeCol"
+                    id="frTheme"
+                    class="active"
+                  />
+                  <input type="radio" name="themeCol" id="snTheme" />
+                  <input type="radio" name="themeCol" id="thrTheme" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="calculatorBox">
+            <div class="results">
+              <p class="currentValue">0</p>
+            </div>
+            <div class="mainBody">
+              <div class="numbers">
+                <button class="btn no"><span>7</span></button>
+                <button class="btn no"><span>8</span></button>
+                <button class="btn no"><span>9</span></button
+                ><button class="delBtn btn"><span>DEL</span></button>
+                <button class="btn no"><span>4</span></button>
+                <button class="btn no"><span>5</span></button
+                ><button class="btn no"><span>6</span></button>
+                <button class="plusBtn btn opr"><span>+</span></button>
+                <button class="btn no"><span>1</span></button
+                ><button class="btn no"><span>2</span></button>
+                <button class="btn no"><span>3</span></button>
+                <button class="minusBtn btn opr"><span>-</span></button
+                ><button class="dotBtn btn no"><span>.</span></button>
+                <button class="btn no"><span>0</span></button>
+                <button class="divBtn btn opr"><span>/</span></button
+                ><button class="multBtn btn opr"><span>x</span></button>
+                <button class="reset btn"><span>RESET</span></button>
+                <button class="equals btn"><span>=</span></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- js -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

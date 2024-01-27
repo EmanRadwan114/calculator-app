@@ -1,0 +1,269 @@
+/* *start of general styles */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+
+  --mainBg: hsl(222, 26%, 31%);
+  --resultsBg: hsl(224, 36%, 15%);
+  --txtClr: white;
+  --calcBg: hsl(223, 31%, 20%);
+  --btnsBg: hsl(30, 25%, 89%);
+  --btnsClr: hsl(221, 14%, 31%);
+  --keyClr: hsl(225, 21%, 49%);
+  --equalsBg: hsl(6, 63%, 50%);
+  --keyShadow: hsl(28, 16%, 65%);
+  --resetShadow: hsl(224, 28%, 35%);
+  --eqhadow: hsl(6, 70%, 34%);
+}
+/* *end of general styles */
+
+/* *start of common styles */
+.results,
+.mainBody,
+.numbers button {
+  border-radius: 7px;
+}
+.numbers .reset,
+.numbers .delBtn,
+.numbers .equals,
+.calc,
+.themeTitle {
+  color: var(--txtClr);
+  font-size: 0.7rem;
+}
+.numbers .reset,
+.numbers .delBtn,
+.numbers .equals,
+.theme p,
+label {
+  color: var(--txtClr);
+}
+/* *end of common styles */
+
+/* *start of theme color */
+.theme,
+.themeNo,
+.themeBox,
+.inputs,
+.labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-column-gap: 0.85rem;
+  -moz-column-gap: 0.85rem;
+  column-gap: 0.85rem;
+}
+
+.themeBox {
+  width: calc(75% - 0.45rem);
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.calc {
+  width: calc(25% - 0.45rem);
+}
+
+.themeNo {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.theme {
+  margin-bottom: 0.75rem;
+}
+
+label {
+  font-size: 0.5rem;
+}
+
+input[type="radio"],
+label {
+  cursor: pointer;
+}
+
+.labels {
+  -webkit-column-gap: 0.6rem;
+  -moz-column-gap: 0.6rem;
+  column-gap: 0.6rem;
+}
+
+.inputs {
+  background-color: var(--resultsBg);
+  margin-top: 7px;
+  padding: 3px 4px;
+  border-radius: 20px;
+  -webkit-column-gap: 0.2rem;
+  -moz-column-gap: 0.2rem;
+  column-gap: 0.2rem;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+input[type="radio"].active {
+  background-color: var(--equalsBg);
+}
+
+.themeTitle {
+  text-transform: uppercase;
+  font-size: 0.45rem;
+}
+/* *end of theme color */
+
+/* *start of main sec */
+main {
+  background-color: var(--mainBg);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container {
+  width: 28%;
+}
+
+.results {
+  background-color: var(--resultsBg);
+  text-align: end;
+  color: var(--txtClr);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border: none;
+}
+
+.results:focus-visible {
+  outline: none;
+}
+
+.mainBody {
+  background-color: var(--calcBg);
+  padding: 0.7rem;
+}
+
+.numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.5rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.numbers button {
+  width: calc(100% / 4 - 0.5rem);
+  background-color: var(--btnsBg);
+  padding: 0.3rem;
+  color: var(--btnsClr);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  -webkit-box-shadow: 0 2px 4px 0px var(--keyShadow);
+  box-shadow: 0 2px 4px 0px var(--keyShadow);
+  cursor: pointer;
+}
+
+.numbers .delBtn,
+.numbers .reset {
+  background-color: var(--keyClr);
+  -webkit-box-shadow: 0 4px 4px 0px var(--resetShadow);
+  box-shadow: 0 4px 4px 0px var(--resetShadow);
+  text-transform: uppercase;
+}
+
+.numbers .equals {
+  background-color: var(--equalsBg);
+  -webkit-box-shadow: 0 4px 4px 0px var(--eqhadow);
+  box-shadow: 0 4px 4px 0px var(--eqhadow);
+}
+
+.numbers .reset,
+.numbers .equals {
+  width: calc(100% / 2 - 0.25rem);
+}
+
+/* *end of main sec */
+
+/* *start of media query  */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .container {
+    width: 95%;
+  }
+
+  .numbers button {
+    font-size: 0.7rem;
+  }
+  .numbers .reset,
+  .numbers .delBtn,
+  .numbers .equals {
+    font-size: 0.5rem;
+  }
+
+  .mainBody {
+    padding: 0.5rem;
+  }
+
+  .results {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+/* *end of media query  */
